@@ -95,6 +95,7 @@ body {
 
 /* Головна навігація */
 .nav {
+    z-index: 10;
     position: absolute;
     width: 647px;
     height: 22px;
@@ -158,7 +159,7 @@ body {
     content: '';
     display: block;
     position: absolute;
-    bottom: -1px; /* було bottom: -1 */
+    bottom: -1px;
     left: 0;
     width: 0;
     height: 1px;
