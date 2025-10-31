@@ -87,6 +87,7 @@ body {
     top: 31px;
     right: 90px;
     transition: filter 0.3s ease;
+    z-index: 10;
 }
 
 .account:hover {
@@ -148,7 +149,6 @@ body {
     position: relative;
     padding-bottom: 5px;
     white-space: pre;
-    transition: color 0.3s ease;
 }
 
 .nav ul li a::after {
@@ -160,7 +160,7 @@ body {
     width: 0;
     height: 1px;
     background-color: #ffd700;
-    transition: width 0.3s ease;
+    transition: width 0.9s ease;
 }
 
 .nav ul li a:hover::after {
