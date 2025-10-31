@@ -147,13 +147,18 @@ body {
     position: relative;
     padding-bottom: 5px;
     white-space: pre;
+    transition: color 0.3s ease; /* додати це */
+}
+
+.nav ul li a:hover {
+    color: #ffd700; /* додати це */
 }
 
 .nav ul li a::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: -1;
+    bottom: -1px; /* було bottom: -1 */
     left: 0;
     width: 0;
     height: 1px;
