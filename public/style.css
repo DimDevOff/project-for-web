@@ -1,0 +1,397 @@
+/* Підключення шрифтів */
+@font-face {
+    font-family: 'BudujSans';
+    src: url('../public/font/BudujSansTRIAL-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BudujSans bl';
+    src: url('../public/font/BudujSansTRIAL-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BudujSans bold';
+    src: url('../public/font/BudujSansTRIAL-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'e-Ukr';
+    src: url('../public/font/e-Ukraine-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'e-Ukr light';
+    src: url('../public/font/e-Ukraine-Light.otf') format('opentype');
+}
+
+/* Базові стилі для тіла сторінки */
+body {
+    margin: 0;
+    font-family: 'BudujSans';
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+/* Розмитий фон сторінки */
+.blurred-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../public/img/header.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+/* Обгортка для основного контенту */
+.page-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-image: url('../public/img/header.png');
+    background-position: center -1.8%;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Головний контент */
+.main-content {
+    position: relative;
+    aspect-ratio: 1600 / 1104;
+}
+
+/* Стилі для хедера */
+.header .logo img {
+    width: 33px;
+    position: absolute;
+    top: 25px;
+    left: 82px;
+}
+
+/* Іконка акаунта */
+.account {
+    position: absolute;
+    top: 31px;
+    right: 90px;
+    transition: filter 0.3s ease;
+}
+
+.account:hover {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(67%) saturate(422%) hue-rotate(329deg) brightness(103%) contrast(97%);
+}
+
+/* Головна навігація */
+.nav {
+    position: absolute;
+    width: 647px;
+    height: 22px;
+    top: 28px;
+    left: 49.7%;
+    transform: translateX(-50%);
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+
+.nav ul li {
+    flex-grow: 1;
+    text-align: center;
+    word-spacing: 1px;
+    transform: scaleX(1);
+}
+
+.nav ul .head {
+    word-spacing: -1px;
+}
+
+.nav ul .about {
+    word-spacing: -1px;
+}
+
+.nav ul .locations {
+    word-spacing: -1.7px;
+}
+
+.nav ul .galery {
+    word-spacing: -1px;
+}
+
+.nav ul .contacts {
+    word-spacing: -1px;
+}
+
+.nav ul li a {
+    font-family: 'BudujSans';
+    color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    white-space: pre;
+}
+
+.nav ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Кнопка "Дізнатися більше" */
+.learn-more-button, .feetback-button {
+    background-color: #fee45c;
+    box-shadow: 8px 7px 16px 0px #F8DF5F;
+    font-family: 'e-Ukr';
+    color: #000000;
+    border: none;
+    padding-left: 21.5px;
+    padding-right: 18.5px;
+    padding-top: 19.5px;
+    padding-bottom: 20px;
+    width: 262px;
+    font-size: 16px;
+    letter-spacing: 2.2px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 583px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.learn-more-button:hover {
+    background-color: #e6c200;
+}
+
+/* Головний заголовок */
+.hero-title {
+    font-family: 'BudujSans bl';
+    color: #000000;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 219px;
+    left: 81px;
+    right: 136px;
+    width: auto;
+    line-height: normal;
+    text-align: left;
+    font-size: 75px;
+}
+
+.left-word {
+    word-spacing: -4.9px;
+}
+
+.right-word {
+    word-spacing: -4.5px;
+}
+
+/* Секція "Про проєкт" */
+.about-section {
+    margin-top: -99.1px;
+    background-color: #FFFFFF;
+    display: flow-root;
+    color: #000000;
+    position: relative;
+    z-index: 2;
+    aspect-ratio: 1600 / 1076;
+}
+
+.about-container { 
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image {
+    padding-top: 41px;
+    padding-left: 109px;
+    flex: 1;
+    position: relative;
+    aspect-ratio: 1600 / 1009;
+    text-align: left;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-title {
+    font-family: 'BudujSans bold';
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin-top: 0px;
+    padding-left: 102.5px;
+}
+
+.about-text {
+    margin-top: -109px;
+    margin-right: 44px;
+    flex: 1;
+}
+
+.about-text p {
+    font-family: 'e-Ukr light';
+    letter-spacing: 2.17px;
+    font-size: 18px;
+    line-height: 1.89;
+    margin-bottom: 40px;
+    width: 788px;
+    color: #000000;
+}
+
+.about-text .feetback-button {
+    position: static;
+    transform: none;
+    margin-left: 249px;
+    margin-top: 25px;
+    padding-top: 21px;
+    width: 264px;
+    letter-spacing: 2.22px;
+}
+
+/* Статистика */
+.statistics-footer {
+    width: 100%;
+    background: #fff;
+    padding: 54px 0 24px 0;
+}
+
+/* Стилі для рядка статистики */
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1426px;
+    margin: 0px auto;
+    padding: 0px 0px;
+    margin-left: 104px;
+    margin-top: -2px;
+    position: relative;
+    border-bottom: 1.5px solid #d9d9d9;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 22%;
+    position: relative;
+}
+
+.stat-number {
+    color: #FFE45C;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'BudujSans bold';
+    margin-left: -3px;
+    letter-spacing: 3px;
+}
+
+.stat-label {
+    color: #000;
+    font-size: 18px;
+    font-family: 'e-Ukr light';
+    margin-left: -1px;
+    margin-top: 12px;
+    margin-bottom: 32px;
+    letter-spacing: 2.1px;
+    line-height: 23.5px;
+}
+
+.stat-dot {
+    width: 21px;
+    height: 21px;
+    background: #FFE45C;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10.5px;
+    left: -2px;
+}
+
+#num2 {
+    font-size: 25px;
+    margin-left: 17px;
+    margin-top: -1px;
+    letter-spacing: 2.4px;
+}
+
+#num3 {
+    margin-left: 34.5px;
+}
+
+#num4 {
+    letter-spacing: 2.5px;
+    margin-top: -1.6px;
+    font-size: 25px;
+    margin-left: 51.2px;
+}
+
+#text2 {
+    margin-left: 17px;
+}
+
+#text3 {
+    margin-left: 34px;
+    letter-spacing: 2.17px;
+}
+
+#text4 {
+    margin-top: 11px;
+    margin-left: 51px;
+    letter-spacing: 2.2px;
+    line-height: 24px;
+}
+
+.stats-row .stat-item:nth-child(2) .stat-dot {
+    left: 8.38%;
+    bottom: -11px;
+    transform: translateX(-50%);
+}
+
+.stats-row .stat-item:nth-child(3) .stat-dot {
+    left: 17.1%;
+    bottom: -11px;
+    transform: translateX(-100%);
+}
+
+.stats-row .stat-item:nth-child(4) .stat-dot {
+    left: 22.6%;
+    bottom: -11px;
+    transform: translateX(-100%);
+}
